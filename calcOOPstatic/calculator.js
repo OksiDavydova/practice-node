@@ -1,10 +1,5 @@
 class Calculator {
-  constructor(operation, arrOfNumbers) {
-    this.operation = operation;
-    this.arrOfNumbers = arrOfNumbers;
-  }
-
-  sum = (operation, arrOfNumbers) => {
+  static sum = (operation, arrOfNumbers) => {
     if (operation === "sum") {
       let result = arrOfNumbers.reduce((total, number) => {
         return total + number;
@@ -15,7 +10,7 @@ class Calculator {
     return null;
   };
 
-  sub = (operation, arrOfNumbers) => {
+  static sub = (operation, arrOfNumbers) => {
     if (operation === "sub") {
       let result = arrOfNumbers.reduce((total, number) => {
         return total - number;
@@ -26,7 +21,7 @@ class Calculator {
     return null;
   };
 
-  mult = (operation, arrOfNumbers) => {
+  static mult = (operation, arrOfNumbers) => {
     if (operation === "mult") {
       let result = arrOfNumbers.reduce((total, number) => {
         return total * number;
@@ -37,7 +32,7 @@ class Calculator {
     return null;
   };
 
-  div = (operation, arrOfNumbers) => {
+  static div = (operation, arrOfNumbers) => {
     if (operation === "div") {
       let result = arrOfNumbers.reduce((total, number) => {
         return total / number;
@@ -48,7 +43,7 @@ class Calculator {
     return null;
   };
 
-  actionHandler = (operation, arrOfNumbers) => {
+  static actionHandler = (operation, arrOfNumbers) => {
     switch (operation) {
       case "sum":
         this.sum(operation, arrOfNumbers);
@@ -67,8 +62,8 @@ class Calculator {
     }
   };
 
-  init = () => {
-    this.actionHandler(this.operation, this.arrOfNumbers);
+  static init = (operation, arrOfNumbers) => {
+    this.actionHandler(operation, arrOfNumbers);
   };
 }
 
@@ -76,4 +71,4 @@ const [operation, ...numbers] = process.argv.slice(2);
 
 const arrOfNumbers = numbers.map((item) => Number(item));
 
-module.exports = new Calculator(operation, arrOfNumbers);
+module.exports = Calculator.init(operation, arrOfNumbers);

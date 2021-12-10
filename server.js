@@ -6,4 +6,11 @@
 // console.log("hello world");
 // console.log(process.env.NODE_ENV);
 
-require("./calc/index");
+// require("./calc/index");
+
+// const { calcOOP } = require("./calcOOP");
+// console.log(calcOOP);
+// calcOOP.init();
+
+//static
+const { calcOOP } = require("./calcOOPstatic");
