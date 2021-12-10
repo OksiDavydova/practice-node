@@ -1,0 +1,24 @@
+{
+  "name": "practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js ",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OksiDavydova/practice-node.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/OksiDavydova/practice-node/issues"
+  },
+  "homepage": "https://github.com/OksiDavydova/practice-node#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
